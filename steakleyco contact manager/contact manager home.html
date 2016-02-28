@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="contact manager css.css">
+
+</head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navLinks">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="contact manager home.html">SteakleyCo Contacts!</a>
+      </div>
+      <div id="navLinks" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="contact manager home.html"><img src="brand-icon.png" height=50px></a></li>
+          <li><a href="contact manager about.html">About</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="row">
+        <div class="jumbotron"><h3>SteakleyCo Contacts Manager</h3></div>
+      </div>
+
+        <!-- modal dialogue to add a new contact, using bootstrap -->
+        <div id="addModal" class="modal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" >&times;</button>
+              </div>
+              <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                      <label for="firstname">First Name</label>
+                      <input id="firstname" type="text" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                      <label for="lastname">Last Name</label>
+                      <input id="lastname" type="text" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <input id="email" type="text" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                      <label for="phone">Phone</label>
+                      <input id="phone" type="text" class="form-control"/>
+                    </div>
+                </form>
+                </div>
+                <!-- custom class errormessage, to set the text red -->
+                <div class="form-group errormessage" id="errorMessage"></div>
+                <div class="modal-footer">
+                  <button id="addDialog" type="button" class="btn btn-primary">Add</button>
+                  <button id="cancelAdd" type="button" class="btn btn-default">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+    </div>
+
+    <div class="container">
+
+      <!-- table to display the contact list, to the left of the screen -->
+      <div class="table-responsive col-xs-8">
+        <table class="table">
+          <thead>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th></th>
+            <th></th>
+          </thead>
+          <tbody id='contacts'</tbody>
+        </table>
+      </div>
+
+      <!-- on the right of the screen, the button to add a new customer, and a
+            a box to enter search filtersm of first and/or last name -->
+      <div class="col-xs-4">
+
+            <button id="addContact" type="button" class="btn btn-primary center-block">
+              Add a new contact
+            </button>
+
+        <form class="form specialbox">
+          <div class="row">
+            <div class="text-center"><h3>Filter the list</h3></div>
+          </div>
+          <div class="form-group">
+            <label for="searchFirstName">First Name:</label>
+              <input id="searchFirstName" type="text" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="searchLastName">Last Name:</label>
+              <input id="searchLastName" type="text" class="form-control" />
+          </div>
+
+          <div class="text-center">
+            <button id="search" class="btn btn-info" type="button">Search</button>
+            <button id="searchCancel" class="btn btn-default" type="button">Cancel</button>
+        </div>
+        </form>
+
+      </div>
+
+    </div>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+  <script src="contact manager home.js"></script>
+  <script src="contact manager common.js"></script>
+
+  </body>
+</html>
