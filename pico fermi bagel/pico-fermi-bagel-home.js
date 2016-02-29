@@ -13,25 +13,20 @@ function gameInit(){
   $("#playAgain").hide();
   /* set up the number to be guessed */
   PFB[0] = Math.floor(Math.random() * 10);
-  newGuess = Math.floor(Math.random() * 10);
-  /* check to make sure the second number isn't the same as the first number
-     as the rule is, all three digits must be unique */
-  while (newGuess == PFB[0]) {
+  for (i=1;i<3;i++){
     newGuess = Math.floor(Math.random() * 10);
+    /* check to make sure the random numnber isn't the same any of the other
+       numbers as the rule is, all three digits must be unique */
+    while (PFB.indexOf(newGuess) != -1) {
+      newGuess = Math.floor(Math.random() * 10);
+    }
+    PFB[i] = newGuess;
   }
-  PFB[1] = newGuess;
-  newGuess = Math.floor(Math.random() * 10);
-  /* check that the third number is not the same as the 1st or 2nd */
-  while ((newGuess == PFB[0]) || (newGuess == PFB[1])) {
-    newGuess = Math.floor(Math.random() * 10);
-  }
-  PFB[2] = newGuess;
 }
 
 gameInit();
 
 function processGuess() {
-  event.preventDefault();
   /* counts the number of "fermi" and "pico" results for the current guess */
   var fermiCount = 0;
   var picoCount = 0;
@@ -97,27 +92,27 @@ function processGuess() {
 }
 }
 
-$('#guessform').submit(function() {
+$('#guessform').submit(function(e) {
   /* same function, for pressing enter in the guess field, or clicking the submit
      button */
 
-  event.preventDefault();
+  e.preventDefault();
   processGuess();
 
 });
 
-$('#submit').on('click', function() {
+$('#submit').on('click', function(e) {
   /* same function, for pressing enter in the guess field, or clicking the submit
      button */
 
-  event.preventDefault();
+  e.preventDefault();
   processGuess();
 
 });
 
-$('#playAgain').on('click', function() {
+$('#playAgain').on('click', function(e) {
   /* play again button restarts the game */
-  event.preventDefault();
+  e.preventDefault();
   guessCount = 0;
   resultsTable.innerHTML = "";
   document.getElementById('submit').disabled = false;
