@@ -37,9 +37,9 @@
   $('#deleteDialog').on('click', function() {
     contactsList.splice(contactsListIndex,1);
     writeTable();
-    window.open("contact manager home.html","_self");
+    window.open("contact-manager-home.html","_self");
   });
 
   $('#cancelDialog').on('click', function() {
-    window.open("contact manager home.html","_self");
+    window.open("contact-manager-home.html","_self");
   });

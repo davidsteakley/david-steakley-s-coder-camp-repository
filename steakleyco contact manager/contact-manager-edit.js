@@ -54,10 +54,10 @@
       contactsList[contactsListIndex].contactEmail = document.getElementById('email').value;
       contactsList[contactsListIndex].contactPhone = document.getElementById('phone').value;
       writeTable();
-      window.open("contact manager home.html","_self");
+      window.open("contact-manager-home.html","_self");
     }
   });
 
   $('#cancelDialog').on('click', function() {
-    window.open("contact manager home.html","_self");
+    window.open("contact-manager-home.html","_self");
   });

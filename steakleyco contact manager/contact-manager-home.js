@@ -58,11 +58,11 @@
       // this operation retrieves the hidden element and passes it to the delete page
       // as a URL parameter
       contactsListID = parseInt(e.target.parentElement.parentElement.parentElement.lastChild.innerHTML);
-      window.open("contact manager delete.html?contactsListID=" + contactsListID,"_self");
+      window.open("contact-manager-delete.html?contactsListID=" + contactsListID,"_self");
     }
     else if (e.target.classList[0] === "edit"){
       contactsListID = parseInt(e.target.parentElement.parentElement.parentElement.lastChild.innerHTML);
-      window.open("contact manager edit.html?contactsListID=" + contactsListID,"_self");
+      window.open("contact-manager-edit.html?contactsListID=" + contactsListID,"_self");
     }
   })
 
