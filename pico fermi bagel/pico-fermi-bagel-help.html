@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Help on Pico Fermi Bagel</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  </head>
+  <body>
+
+    <!-- shared navbar across the proect -->
+    <nav class="navbar navbar-default">
+
+      <div class="navbar-header">
+
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navLinks">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" href="pico-fermi-bagel-home.html">Pico Fermi Bagel!</a>
+      </div>
+
+      <div id="navLinks" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="pico-fermi-bagel-help.html">Help</a></li>
+          <li><a href="pico-fermi-bagel-about.html">About</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="jumbotron col-xs-8"><h3>How to play Pico Fermi Bagel</h3></div>
+      </div>
+      <div class="row center-block">
+        <div class="col-xs-8"><pre>
+The game begins with the computer secretly choosing a 3 dgit number with no repeated digits.
+
+You attempt to guess the number.  The computer responds to each guess as follows:
+• If the guess has no numbers correct, the response is: "Bagel."
+• For each digit the guess has correct, but in the wrong place, the response is: "Pico."
+• For each digit the guess has correct and in the correct place, the response is: "Fermi."
+
+As an example, lets say that the secret number is 489.
+    Guess 1: 362 Bagel — no digit is correct.
+    Guess 2: 820 Pico — the 8 is in the wrong place.
+    Guess 3: 418 Pico Fermi — the 8 is in the wrong place, the 4 is in the correct place.
+    Guess 4: 518 Pico — the 8 is in the wrong place.
+    Guess 5: 487 Fermi Fermi — the 4 and 8 are in the correct place.
+    Guess 6: 489 Fermi Fermi Fermi — all digits are in the correct place.
+
+If you cannot correctly guess the number in 20 moves, you lose.  You should be able
+to guess the number correctly in 8 moves.
+</pre></div>
+      </div>
+    </div>
+
+
+  </body>
+
+
+</html>

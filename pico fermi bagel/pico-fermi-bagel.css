@@ -1,0 +1,11 @@
+.specialbox {
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px
+}
+
+.errormessage {
+  color:red;
+  padding: 20px;
+}

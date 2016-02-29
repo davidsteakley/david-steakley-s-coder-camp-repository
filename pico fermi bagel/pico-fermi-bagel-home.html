@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PicoFermBagel!</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="pico-fermi-bagel.css">
+
+  </head>
+  <body>
+
+    <!-- shared navbar across the proect -->
+    <nav class="navbar navbar-default">
+
+      <div class="navbar-header">
+
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navLinks">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" href="pico-fermi-bagel-home.html">Pico Fermi Bagel!</a>
+      </div>
+
+      <div id="navLinks" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="pico-fermi-bagel-help.html">Help</a></li>
+          <li><a href="pico-fermi-bagel-about.html">About</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="col-xs-4">
+
+      <form class="form specialbox" id="guessform">
+        <div class="row">
+          <div class="text-center"><h3>Pico Fermi Bagel!</h3></div>
+        </div>
+        <div class="form-group">
+          <label for="guess">Guess:</label>
+          <input id="guess" type="text" class="form-control" />
+        </div>
+
+        <div class="text-center">
+          <button id="submit" class="btn btn-primary" type="button">Submit</button>
+        </div>
+      </form>
+
+      <div class="col-xs-12 feedback">
+        <div class="text-center">
+          <div id=guessResult></div>
+          <button id="playAgain" class="btn btn-primary" type="button">Play Again</button>
+        </div>
+      </div>
+
+  </div>
+
+    <div class="table-responsive specialbox col-xs-4">
+      <table class="table">
+        <thead>
+          <th>Turn #</th>
+          <th>Guess</th>
+          <th>Result</th>
+        </thead>
+        <tbody id='results'</tbody>
+      </table>
+    </div>
+
+  </div>
+
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <script src="pico-fermi-bagel-home.js"></script>
+
+  </body>
+</html>
