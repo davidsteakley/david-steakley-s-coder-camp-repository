@@ -2,6 +2,8 @@ var guessCount = 0;
 
 var guessList = [];
 
+/* get pointer to the table in which guess results will be displayed */
+
 var resultsTable = document.getElementById('results');
 
 var guessResult = [];
