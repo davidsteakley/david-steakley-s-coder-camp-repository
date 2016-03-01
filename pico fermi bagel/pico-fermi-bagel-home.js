@@ -90,6 +90,7 @@ function processGuess() {
       /* when the game is over, show the "play again" button and deactivate the guess button */
       $("#playAgain").show();
       document.getElementById('submit').disabled = true;
+      document.getElementById('guess').disabled = true;
     }
 }
 }
@@ -118,6 +119,7 @@ $('#playAgain').on('click', function(e) {
   guessCount = 0;
   resultsTable.innerHTML = "";
   document.getElementById('submit').disabled = false;
+  document.getElementById('guess').disabled = false;
   document.getElementById('guessResult').innerHTML = "";
   gameInit();
 });
